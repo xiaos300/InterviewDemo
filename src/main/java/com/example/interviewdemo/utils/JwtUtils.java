@@ -18,10 +18,10 @@ import java.util.Date;
  */
 public class JwtUtils {
     // 秘钥
-    private static final String SECRET = "Hello";
+    private static final String SECRET = "Interview-demo-project-secret-test";
     // 过期时间（24小时）
     private static final long EXPIRATION = 1000L*60*60*24;
-    private static final Key KEY = Keys.hmacShaKeyFor(SECRET.getBytes(StandardCharsets.UTF_8));
+    private static final SecretKey KEY = Keys.hmacShaKeyFor(SECRET.getBytes(StandardCharsets.UTF_8));
     public static String generateToken(Long userId, String username){
         Date now = new Date();
         Date expireDate = new Date(now.getTime() + EXPIRATION);
@@ -36,7 +36,7 @@ public class JwtUtils {
 
     public static Claims parseToken(String token){
         return Jwts.parser()
-                .verifyWith((SecretKey) KEY)
+                .verifyWith(KEY)
                 .build()
                 .parseSignedClaims(token)// PS:当token无效时直接抛出异常，而不是返回false
                 .getPayload();

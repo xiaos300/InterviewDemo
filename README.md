@@ -6,13 +6,21 @@
 创建实体类（Answer、Category、InterviewSession、InterviewSessionQuestion、Question、Report、User）
 创建Repository接口  
 todo:
-- [x] 通用返回类Result
-- [x] 业务异常类BusinessException  
-- [x] 全局日志配置log4j
-- [ ] 使用Spring-security（BCryptPasswordEncoder加密） + JWT 做校验  
-  - [x] UserRepository 增加 existsByUsername 和 findByUsername
-  - [x] 写用户模块DTO
-  - [x] 处理密码加密
-  - [ ] 登录后存储用户id
+- 框架搭建
+  - [x] 通用返回类Result
+  - [x] 业务异常类BusinessException  
+  - [x] 全局日志配置log4j
+  - [x] Swagger配置
+  - [ ] DTO层添加参数校验注解
+- 登录
+  - [ ] 使用Spring-security（BCryptPasswordEncoder加密） + JWT 做校验  
+    - [x] UserRepository 增加 existsByUsername 和 findByUsername
+    - [x] 写用户模块DTO
+    - [x] 处理密码加密
+    - [ ] 拦截器鉴权  
+    - [ ] Swagger注解完善
+    - [ ] Spring Security 整套注入
+    - [ ] 登录后存储用户id
+
 
 
