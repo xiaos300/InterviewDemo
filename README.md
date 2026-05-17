@@ -10,9 +10,9 @@ todo:
 - [x] 业务异常类BusinessException  
 - [x] 全局日志配置log4j
 - [ ] 使用Spring-security（BCryptPasswordEncoder加密） + JWT 做校验  
-  - [ ] UserRepository 增加 existsByUsername 和 findByUsername
-  - [ ] 写用户模块DTO
-  - [ ] 处理密码加密
-
+  - [x] UserRepository 增加 existsByUsername 和 findByUsername
+  - [x] 写用户模块DTO
+  - [x] 处理密码加密
+  - [ ] 登录后存储用户id
 
 
